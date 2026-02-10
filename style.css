@@ -1,0 +1,83 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  height: 100vh;
+  background-color: #f7e8d8;
+  background-image:
+    linear-gradient(#e9d6c4 1px, transparent 1px),
+    linear-gradient(90deg, #e9d6c4 1px, transparent 1px);
+  background-size: 40px 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.container {
+  position: relative;
+  width: 360px;
+  height: 520px;
+}
+
+/* Cards */
+.card {
+  position: absolute;
+  inset: 0;
+  background: #ffe4e6;
+  border-radius: 28px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+  padding: 30px 25px;
+  text-align: center;
+
+  transform: translateX(100%);
+  opacity: 0;
+  transition: 0.6s ease;
+}
+
+.card img {
+  width: 140px;
+  margin-bottom: 20px;
+}
+
+/* Active card */
+.card.active {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+/* Leaving card */
+.card.exit {
+  transform: translateX(-100%);
+  opacity: 0;
+}
+
+/* Text */
+h1 {
+  color: #ff4d6d;
+  font-size: 24px;
+  margin-bottom: 12px;
+}
+
+p {
+  color: #555;
+  font-size: 14px;
+  line-height: 1.5;
+  margin-bottom: 30px;
+}
+
+/* Button */
+button {
+  background: #ff2d55;
+  color: white;
+  border: none;
+  padding: 14px 36px;
+  font-size: 16px;
+  border-radius: 30px;
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(255,45,85,0.4);
+}
